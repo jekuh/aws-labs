@@ -1,0 +1,13 @@
+provider "aws" {
+  region = "eu-central-1"
+}
+
+resource "aws_s3_bucket" "example" {
+  bucket = "dobretech-terraform-s3-bucket-1"
+  acl    = "private"
+
+  tags = {
+    Name        = "DoBreTech Terraform S3 Bucket 1"
+    Environment = "Dev"
+  }
+}
